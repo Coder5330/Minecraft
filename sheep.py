@@ -46,7 +46,6 @@ class Sheep(Mob):
 
     def _build_vao(self):
         u = self._uv
-        # Minecraft sheep skin 64x32 — same layout as cow/pig
         head_top    = u( 8,  0,  8,  8)
         head_bottom = u(16,  0,  8,  8)
         head_right  = u( 0,  8,  8,  8)
@@ -68,7 +67,6 @@ class Sheep(Mob):
         ll  = u( 8, 20,  4,  6)
         lbk = u(12, 20,  4,  6)
 
-        # Sheep slightly smaller/stockier than cow
         body_hw, body_hh, body_hl = 0.38, 0.28, 0.52
         body_cy = 0.33
         leg_w, leg_h = 0.12, 0.30
