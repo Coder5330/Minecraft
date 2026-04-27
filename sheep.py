@@ -122,8 +122,8 @@ class Sheep(Mob):
             dz = self.position.z - player.position.z
             dist = math.sqrt(dx*dx + dz*dz) or 1
             self.yaw = math.atan2(dz, dx)
-            self.position.x += (dx/dist) * SHEEP_SPEED * 2.5 * dt
-            self.position.z += (dz/dist) * SHEEP_SPEED * 2.5 * dt
+            self.move((dx/dist) * SHEEP_SPEED * 2.5 * dt,
+                      (dz/dist) * SHEEP_SPEED * 2.5 * dt)
         else:
             self._wander_timer += dt
             if self._wander_timer >= WANDER_CHANGE_MS:
@@ -131,8 +131,8 @@ class Sheep(Mob):
                 if random.random() < 0.65:
                     self.yaw = random.uniform(0, math.pi * 2)
             if random.random() < 0.25:
-                self.position.x += math.cos(self.yaw) * SHEEP_SPEED * dt
-                self.position.z += math.sin(self.yaw) * SHEEP_SPEED * dt
+                self.move(math.cos(self.yaw) * SHEEP_SPEED * dt,
+                          math.sin(self.yaw) * SHEEP_SPEED * dt)
 
     def get_model_matrix(self):
         m = glm.mat4()
