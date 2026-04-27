@@ -15,12 +15,19 @@ Control: WASDQE + mouse
 In your terminal, run this: git clone https://github.com/Coder5330/Minecraft
 
 It should say something like: 
+
 Cloning into 'Minecraft'...
+
 remote: Enumerating objects: 121, done.
+
 remote: Counting objects: 100% (121/121), done.
+
 remote: Compressing objects: 100% (119/119), done.
+
 remote: Total 121 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+
 Receiving objects: 100% (121/121), 872.27 KiB | 5.35 MiB/s, done.
+
 Resolving deltas: 100% (13/13), done.
 
 Then run: cd Minecraft
@@ -32,6 +39,7 @@ For single player, run: python3 main.py
 It should open a Minecraft like world
 
 =================== Multiplayer ===================
+
 You need multiple laptops for multiplayer, all on the same WiFi network.
 
 --- On the HOST laptop ---
