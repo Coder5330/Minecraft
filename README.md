@@ -30,6 +30,7 @@ Then run: cd Minecraft
 For single player, run: python3 main.py
 
 It should open a Minecraft like world
+
 =================== Multiplayer ===================
 You need multiple laptops for multiplayer, all on the same WiFi network.
 
