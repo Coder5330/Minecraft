@@ -61,7 +61,9 @@ Step 4: Join using the HOST's IP from Step 1:
 
 Example:
   Host's IP is 192.168.50.240
+  
   Host runs:    python3 main.py --host 127.0.0.1 --name Alice
+  
   Friend runs:  python3 main.py --host 192.168.50.240 --name Bob
 
 Note: Everyone must be on the same WiFi network.
