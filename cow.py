@@ -121,8 +121,8 @@ class Cow(Mob):
             dz = self.position.z - player.position.z
             dist = math.sqrt(dx*dx + dz*dz) or 1
             self.yaw = math.atan2(dz, dx)
-            self.position.x += (dx/dist) * COW_SPEED * 2 * dt
-            self.position.z += (dz/dist) * COW_SPEED * 2 * dt
+            self.move((dx/dist) * COW_SPEED * 2 * dt,
+                      (dz/dist) * COW_SPEED * 2 * dt)
         else:
             self._wander_timer += dt
             if self._wander_timer >= WANDER_CHANGE_MS:
@@ -130,8 +130,8 @@ class Cow(Mob):
                 if random.random() < 0.6:
                     self.yaw = random.uniform(0, math.pi * 2)
             if random.random() < 0.3:
-                self.position.x += math.cos(self.yaw) * COW_SPEED * dt
-                self.position.z += math.sin(self.yaw) * COW_SPEED * dt
+                self.move(math.cos(self.yaw) * COW_SPEED * dt,
+                          math.sin(self.yaw) * COW_SPEED * dt)
 
     def get_model_matrix(self):
         m = glm.mat4()
