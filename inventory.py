@@ -88,6 +88,24 @@ RECIPES_3x3 = [
     ((DIAMOND_ORE, DIAMOND_ORE, DIAMOND_ORE,
       _,           ITEM_STICK,  _,
       _,           ITEM_STICK,  _),                                   ITEM_DIAMOND_PICK,   1),
+    # ── Axes ─────────────────────────────────────────────────────
+    # Wooden axe: PPP / _S_ / _S_
+    ((ITEM_PLANK, ITEM_PLANK, _,
+      ITEM_PLANK, ITEM_STICK, _,
+      _,          ITEM_STICK, _),                                     ITEM_WOOD_PICK,      1),
+    # Stone axe
+    ((STONE,      STONE,      _,
+      STONE,      ITEM_STICK, _,
+      _,          ITEM_STICK, _),                                     ITEM_STONE_PICK,     1),
+    # Iron axe (uses IRON_ORE as iron material)
+    ((IRON_ORE,   IRON_ORE,   _,
+      IRON_ORE,   ITEM_STICK, _,
+      _,          ITEM_STICK, _),                                     ITEM_IRON_PICK,      1),
+    # Diamond axe (uses DIAMOND_ORE as diamond material)
+    ((DIAMOND_ORE, DIAMOND_ORE, _,
+      DIAMOND_ORE, ITEM_STICK,  _,
+      _,           ITEM_STICK,  _),                                   ITEM_DIAMOND_PICK,   1),
+    
 ]
 del _
 
