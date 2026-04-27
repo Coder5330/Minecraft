@@ -15,7 +15,6 @@ class Mob:
             self.alive = False
 
     def check_collision(self, pos):
-        """Check if position collides with a solid block."""
         vh = self.app.scene.world.voxel_handler
         radius = 0.3
         for dx in (-radius, radius):
@@ -29,19 +28,15 @@ class Mob:
         return False
 
     def move(self, dx, dz):
-        """Move with collision detection, sliding along walls."""
-        # Try full movement
         new_pos = glm.vec3(self.position.x + dx, self.position.y, self.position.z + dz)
         if not self.check_collision(new_pos):
             self.position.x += dx
             self.position.z += dz
             return
-        # Try sliding along X only
         new_pos_x = glm.vec3(self.position.x + dx, self.position.y, self.position.z)
         if not self.check_collision(new_pos_x):
             self.position.x += dx
             return
-        # Try sliding along Z only
         new_pos_z = glm.vec3(self.position.x, self.position.y, self.position.z + dz)
         if not self.check_collision(new_pos_z):
             self.position.z += dz
@@ -68,12 +63,6 @@ class Mob:
             self.position + glm.vec3(0.0, 0.4, 0.0), MOB_WATER_PUSH
         )
         self.move(flow.x, flow.z)
-
-    def update(self):
-        self.apply_water_current()
-        self.apply_gravity()        )
-        self.position.x += flow.x
-        self.position.z += flow.z
 
     def update(self):
         self.apply_water_current()
