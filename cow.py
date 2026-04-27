@@ -147,7 +147,8 @@ class Cow(Mob):
         shader['m_model'].write(self.get_model_matrix())
         shader['m_view'].write(self.app.player.m_view)
         shader['m_proj'].write(self.app.player.m_proj)
-        self.vao.render()    def _box(self, x0, y0, z0, x1, y1, z1, top, bottom, right, front, left, back):
+        self.vao.render()    
+    def _box(self, x0, y0, z0, x1, y1, z1, top, bottom, right, front, left, back):
         v = []
         v += self._face([x0,y0,z1],[x1,y0,z1],[x1,y1,z1],[x0,y1,z1], front)
         v += self._face([x1,y0,z0],[x0,y0,z0],[x0,y1,z0],[x1,y1,z0], back)
