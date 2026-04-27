@@ -45,7 +45,9 @@ You need multiple laptops for multiplayer, all on the same WiFi network.
 --- On the HOST laptop ---
 Step 1: Find your IP address:
   Mac/Linux:  ifconfig | grep "inet "
+  
   Windows:    ipconfig
+  
   Look for something like 192.168.x.x (NOT 127.0.0.1)
 
 Step 2: Start the server:
