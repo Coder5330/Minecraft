@@ -109,7 +109,9 @@ class MobManager:
                 forward = player.forward
                 to_mob = glm.normalize(glm.vec3(dx, dy, dz))
                 if glm.dot(forward, to_mob) > 0.7:
-                    mob.take_damage(5)        angle = random.uniform(0, math.pi * 2)
+                    mob.take_damage(5)      
+                    
+            angle = random.uniform(0, math.pi * 2)
         dist = random.uniform(8, SPAWN_RADIUS)
         x = player.position.x + math.cos(angle) * dist
         z = player.position.z + math.sin(angle) * dist
